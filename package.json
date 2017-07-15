@@ -1,0 +1,32 @@
+{
+  "name": "bb-hub-merchant",
+  "description": "Byteball Hub Merchant",
+  "author": "Byteball",
+  "version": "0.1.5",
+  "main": "start.js",
+  "keywords": [
+    "hub",
+    "byteball",
+    "messaging",
+    "chat"
+  ],
+  "scripts": {
+    "start": "node start.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/rubbish0815/bb_hub_merchant.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubbish0815/bb_hub_merchant/issues"
+  },
+  "browser": {
+    "request": "browser-request",
+    "secp256k1": "secp256k1/js"
+  },
+  "dependencies": {
+  	"bitcore-lib": "^0.13.14",
+    "byteball-relay": "git+https://github.com/byteball/byteball-relay.git"
+  }
+}
