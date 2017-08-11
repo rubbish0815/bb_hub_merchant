@@ -2,7 +2,7 @@
 "use strict";
 
 exports.clientName = 'byteball';
-exports.minClientVersion = '1.9.1';
+exports.minClientVersion = '1.10.0';
 
 // https://console.developers.google.com
 exports.pushApiProjectNumber = 0;
@@ -23,7 +23,7 @@ exports.HEARTBEAT_TIMEOUT = 300*1000;
 exports.storage = 'sqlite';
 
 exports.hub="wss://byteball.org/bb-test";
-exports.deviceName = 'kt-hub-test';
+exports.deviceName = 'kt-hub-merchant-test';
 exports.permanent_paring_secret = '0000';
 exports.KEYS_FILENAME = 'keys.json';
 
@@ -64,6 +64,10 @@ exports.initial_witnesses = [
 	'RJDYXC4YQ4AZKFYTJVCR5GQJF5J6KPRI',
 	'WELOXP3EOA75JWNO6S5ZJHOO3EYFKPIR'
 ];
+
+//exports.LOG_FILENAME = 'bb_log.txt';
+exports.LOG_LEVEL || 6;
+exports.LOG_LEVEL_FILE || 99;
 
 exports.initial_peers = [
 	'wss://byteball.org/bb-test'

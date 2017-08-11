@@ -20,21 +20,6 @@ var KEYS_FILENAME = appDataDir + '/' + conf.KEYS_FILENAME;
 
 var wallet;
 
-
-function replaceConsoleLog(){
-	var log_filename = conf.LOG_FILENAME || (appDataDir + '/log.txt');
-	var writeStream = fs.createWriteStream(log_filename);
-	console.log('---------------');
-	console.log('From this point, output will be redirected to '+log_filename);
-	console.log("To release the terminal, type Ctrl-Z, then 'bg'");
-	console.log = function(){
-		writeStream.write(Date().toString()+': ');
-		writeStream.write(util.format.apply(null, arguments) + '\n');
-	};
-	console.warn = console.log;
-	console.info = console.log;
-}
-
 function isControlAddress(device_address){
 	return (conf.control_addresses && conf.control_addresses.indexOf(device_address) >= 0);
 }
@@ -113,8 +98,6 @@ function compareVersions(currentVersion, minVersion) {
 	}
 }
 
-
-
 eventBus.on('peer_version', function (ws, body) {
 	if (body.program == conf.clientName) {
 		if (conf.minClientVersion && compareVersions(body.program_version, conf.minClientVersion) == '<')
@@ -135,9 +118,6 @@ eventBus.on('text', function(from_address, text){
 		return handleNoWallet(from_address);
 	text = text.trim().toLowerCase();
 });
-
-
-replaceConsoleLog();
 
 if (!conf.permanent_paring_secret)
 	throw Error('no conf.permanent_paring_secret');
