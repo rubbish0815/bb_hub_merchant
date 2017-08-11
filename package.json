@@ -1,7 +1,7 @@
 {
-  "name": "bb-hub-merchant",
+  "name": "kt-bb-hub-merchant",
   "description": "Byteball Hub Merchant",
-  "author": "Byteball",
+  "author": "kt-Byteball",
   "version": "0.1.5",
   "main": "start.js",
   "keywords": [
@@ -27,6 +27,6 @@
   },
   "dependencies": {
   	"bitcore-lib": "^0.13.14",
-    "byteball-relay": "git+https://github.com/byteball/byteball-relay.git"
+    "byteball-relay": "git+https://github.com/rubbish0815/bb-relay.git"
   }
 }
