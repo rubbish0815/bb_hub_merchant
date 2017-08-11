@@ -13,6 +13,7 @@ var device = require('byteballcore/device.js');
 var db = require('byteballcore/db.js');
 var walletDefinedByKeys = require('byteballcore/wallet_defined_by_keys.js');
 var desktopApp = require('byteballcore/desktop_app.js');
+var logger = require('byteballcore/logger.js');
 
 
 var appDataDir = desktopApp.getAppDataDir();
@@ -27,7 +28,7 @@ function isControlAddress(device_address){
 function readKeys(onDone){
 	fs.readFile(KEYS_FILENAME, 'utf8', function(err, data){
 		if (err){
-			console.log('failed to read keys, will gen');
+			logger.log('failed to read keys, will gen');
 			var devicePrivKey = crypto.randomBytes(32);
 			var deviceTempPrivKey = crypto.randomBytes(32);
 			var devicePrevTempPrivKey = crypto.randomBytes(32);
@@ -145,6 +146,6 @@ readKeys(function(devicePrivKey, deviceTempPrivKey, devicePrevTempPrivKey){
 	device.setDeviceName(conf.deviceName);
 	device.setDeviceHub(conf.myhub);
 	var my_device_pubkey = device.getMyDevicePubKey();
-	console.log("my device pubkey: "+my_device_pubkey);
-	console.log("my pairing code: "+my_device_pubkey+"@"+conf.hub+"#"+conf.permanent_paring_secret);
+	logger.log("my device pubkey: "+my_device_pubkey);
+	logger.log("my pairing code: "+my_device_pubkey+"@"+conf.hub+"#"+conf.permanent_paring_secret);
 });
