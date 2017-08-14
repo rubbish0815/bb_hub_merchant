@@ -1,6 +1,6 @@
 /*jslint node: true */
 "use strict";
-var db = require('byteballcore/db.js');
+var db = require('byteballcore/db/db.js');
 var storage = require('byteballcore/storage.js');
 var mail = require('byteballcore/mail.js');
 var conf = require('byteballcore/conf.js');
@@ -29,7 +29,7 @@ storage.readLastMainChainIndex(function(last_mci){
 		LEFT JOIN ( \n\
 			SELECT DISTINCT address \n\
 			FROM units CROSS JOIN unit_authors USING(unit) CROSS JOIN my_witnesses USING(address) \n\
-			WHERE main_chain_index>? OR main_chain_index IS NULL \n\
+			WHERE main_chain_index>? OR main_chain_index IS NULL OR units.creation_date>"+db.addTime('-20 MINUTE')+" \n\
 		) AS active_witnesses USING(address) \n\
 		WHERE active_witnesses.address IS NULL",
 		[last_mci - 100],
