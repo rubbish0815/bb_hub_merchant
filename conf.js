@@ -66,7 +66,7 @@ exports.initial_witnesses = [
 ];
 
 //exports.LOG_FILENAME = 'bb_log.txt';
-exports.LOG_LEVEL || 6;
+exports.LOG_LEVEL || 99;
 exports.LOG_LEVEL_FILE || 99;
 
 exports.initial_peers = [
