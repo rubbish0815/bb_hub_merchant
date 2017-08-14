@@ -8,7 +8,7 @@ exports.minClientVersion = '1.10.0';
 exports.pushApiProjectNumber = 0;
 exports.pushApiKey = '';
 
-exports.port = 6611;
+exports.port = 6612;
 //exports.myUrl = 'wss://mydomain.com/bb';
 exports.bServeAsHub = true;
 exports.bSaveJointJson = true;
