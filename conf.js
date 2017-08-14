@@ -65,9 +65,9 @@ exports.initial_witnesses = [
 	'WELOXP3EOA75JWNO6S5ZJHOO3EYFKPIR'
 ];
 
-//exports.LOG_FILENAME = 'bb_log.txt';
-exports.LOG_LEVEL || 99;
-exports.LOG_LEVEL_FILE || 99;
+//exports.LOG_FILENAME = "bb_log.txt";
+exports.LOG_LEVEL = 99;
+exports.LOG_LEVEL_FILE = 99;
 
 exports.initial_peers = [
 	'wss://byteball.org/bb-test'
