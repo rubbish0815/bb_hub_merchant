@@ -11,9 +11,9 @@ var crypto = require('crypto');
 var util = require('util');
 var device = require('byteballcore/device.js');
 var db = require('byteballcore/db/db.js');
-var walletDefinedByKeys = require('byteballcore/wallet_defined_by_keys.js');
+var walletDefinedByKeys = require('byteballcore/wallet/wallet_defined_by_keys.js');
 var desktopApp = require('byteballcore/desktop_app.js');
-var logger = require('byteballcore/logger.js');
+var logger = require('byteballcore/util/logger.js');
 
 
 var appDataDir = desktopApp.getAppDataDir();
