@@ -67,7 +67,7 @@ exports.initial_witnesses = [
 
 //exports.LOG_FILENAME = "bb_log.txt";
 exports.LOG_LEVEL = 70;
-exports.LOG_LEVEL_CO = "<="
+exports.LOG_LEVEL_CO = "=="
 exports.LOG_LEVEL_FILE = 70;
 exports.LOG_LEVEL_FILE_CO = "<="
 
