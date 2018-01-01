@@ -2,7 +2,7 @@
 "use strict";
 
 exports.clientName = 'bb-hub-merchant';
-exports.minClientVersion = '1.10.0';
+exports.minClientVersion = '2.0.0';
 
 // https://console.developers.google.com
 exports.pushApiProjectNumber = 0;
