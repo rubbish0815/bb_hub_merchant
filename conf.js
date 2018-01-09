@@ -1,8 +1,8 @@
 /*jslint node: true */
 "use strict";
 
-exports.clientName = 'bb-hub-merchant';
-exports.minClientVersion = '2.0.0';
+exports.clientName = 'kt-byteball';
+exports.minClientVersion = '2.1.0';
 
 // https://console.developers.google.com
 exports.pushApiProjectNumber = 0;
@@ -65,14 +65,12 @@ exports.initial_witnesses = [
 	'WELOXP3EOA75JWNO6S5ZJHOO3EYFKPIR'
 ];
 
-//exports.LOG_FILENAME = "bb_log.txt";
-exports.LOG_LEVEL = 70;
-exports.LOG_LEVEL_CO = "=="
-exports.LOG_LEVEL_FILE = 70;
-exports.LOG_LEVEL_FILE_CO = "<="
-
 exports.initial_peers = [
 	'wss://byteball.org/bb-test'
 ];
+
+exports.trustedRegistries = {
+	'AM6GTUKENBYA54FYDAKX2VLENFZIMXWG': 'market'
+};
 
 console.log('finished hub conf');
