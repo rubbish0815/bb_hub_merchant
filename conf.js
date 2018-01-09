@@ -23,7 +23,7 @@ exports.HEARTBEAT_TIMEOUT = 300*1000;
 exports.storage = 'sqlite';
 
 exports.hub="wss://byteball.org/bb-test";
-exports.deviceName = 'kt-hub-merchant-test';
+exports.deviceName = 'kt-hub-test';
 exports.permanent_paring_secret = '0000';
 exports.KEYS_FILENAME = 'keys.json';
 
